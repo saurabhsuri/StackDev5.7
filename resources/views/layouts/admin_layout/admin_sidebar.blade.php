@@ -10,6 +10,15 @@
         <li><a href="form-wizard.html">Form with Wizard</a></li>
       </ul>
     </li>
+
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Products</span> <span class="label label-important"></span></a>
+      <ul>
+        <li><a href="{{url('admin/add-product')}}">Add Products</a></li>
+        <li><a href="{{url('admin/view-product')}}">View Products</a></li>
+        <li><a href="form-wizard.html">Form with Wizard</a></li>
+      </ul>
+    </li>
+
     <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
     <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
     <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>

@@ -51,6 +51,48 @@ $(document).ready(function(){
 	});
 
 
+	//add product
+		$("#add_product").validate({
+		rules:{
+			product_name:{		//name of field not its id
+				required:true
+			},
+			product_code:{
+				required:true,
+			},
+			product_color:{
+				required:true,
+			},
+			product_code:{
+				required:true,
+			},
+			category_id:{
+				required:true,
+			},
+			description:{
+				required:true,
+			},
+			price:{
+				required:true,
+				number:true,
+			},
+			/*product_image:{
+				required:true,
+			}*/
+		},
+		errorClass: "help-inline",
+		errorElement: "span",
+		highlight:function(element, errorClass, validClass) {
+			$(element).parents('.control-group').addClass('error');
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			$(element).parents('.control-group').removeClass('error');
+			$(element).parents('.control-group').addClass('success');
+		}
+	});
+
+
+
 
 	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 	

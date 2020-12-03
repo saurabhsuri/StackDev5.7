@@ -14,8 +14,24 @@ class ProductsController extends Controller
 {
     public function addProducts(Request $request)
     {
+    	if($request->isMethod('post'))
+    	{
+    		$data=$request->all();
+    			
+    		DB::table('products')->insert([
+    			'category_id'=>$data["category_id"],
+    			'product_name'=>$data["product_name"],
+    			'product_code'=>$data["product_code"],
+    			'product_color'=>$data["product_color"],
+    			'description'=>$data["description"],
+    			'price'=>$data["price"]
+    		]);    	
+    	}
+
+
+    	/*GET Request*/
     	$category=DB::table('categories')->where('parent_id',0)->get();
-    	$categories_dropdown="<option value=0 selected disabled>Select</option>";
+    	$categories_dropdown="<option value=' ' selected>Select</option>";
     	foreach($category as $cat)
     	{
     		$categories_dropdown.="<option value='".$cat->id."'>".$cat->name."</option>";
