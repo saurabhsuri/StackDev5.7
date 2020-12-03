@@ -69,9 +69,9 @@ $(document).ready(function(){
 			category_id:{
 				required:true,
 			},
-			description:{
+			/*description:{
 				required:true,
-			},
+			},*/
 			price:{
 				required:true,
 				number:true,

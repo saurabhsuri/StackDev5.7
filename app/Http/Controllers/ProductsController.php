@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Category;
 use Auth;
 use Session;
+use Carbon\Carbon;
 
 
 class ProductsController extends Controller
@@ -24,8 +25,12 @@ class ProductsController extends Controller
     			'product_code'=>$data["product_code"],
     			'product_color'=>$data["product_color"],
     			'description'=>$data["description"],
-    			'price'=>$data["price"]
+    			'price'=>$data["price"],
+    			'created_at'=>Carbon::now(),
+    			'updated_at'=>Carbon::now()
     		]);    	
+
+    		return redirect('admin/add-product')->with('flash_message_success','Products added successfully');
     	}
 
 
