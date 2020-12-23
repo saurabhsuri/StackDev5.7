@@ -12,9 +12,9 @@
             <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>{!!Session('flash_message_error')!!}</strong>
         </div>
-        @endif
+    @endif
 
-        @if(Session::has('flash_message_success'))
+    @if(Session::has('flash_message_success'))
         <div class=" alert alert-success alert-block">
             <button type="button" class="close" data-dismiss="alert">x</button>
                 <strong>{!!Session('flash_message_success')!!}</strong>
